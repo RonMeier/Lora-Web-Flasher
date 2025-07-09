@@ -1,0 +1,10 @@
+{
+  "name": "TTGO LoRa32 V1.6.1 EN",
+  "version": "3.3",
+  "builds": [{ "chipFamily": "ESP32", "parts": [
+      { "path": "bin/heltec-lora32-v2/bootloader.bin", "offset": 4096 },
+      { "path": "bin/heltec-lora32-v2/default.bin", "offset": 32768 },
+      { "path": "bin/heltec-lora32-v2/boot_app0.bin",  "offset": 57344 },
+      { "path": "bin/heltec-lora32-v2/V3.3-heltec-lora32_V2_langEN.bin", "offset": 65536 }
+    ] }]
+}
