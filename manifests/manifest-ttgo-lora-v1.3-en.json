@@ -1,4 +1,4 @@
-au{
+{
   "name": "LilyGo TTGO-LORA32-V1.3 DE",
   "version": "3.2",
   "builds": [{ "chipFamily": "ESP32", "parts": [
