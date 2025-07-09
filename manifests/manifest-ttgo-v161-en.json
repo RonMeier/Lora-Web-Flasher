@@ -1,10 +1,10 @@
 {
-  "name": "TTGO LoRa32 V1.6.1 DE",
+  "name": "TTGO LoRa32 V1.6.1 EN",
   "version": "3.3",
   "builds": [{ "chipFamily": "ESP32", "parts": [
       { "path": "bin/ttgo-v161/bootloader.bin", "offset": 4096 },
       { "path": "bin/ttgo-v161/default.bin", "offset": 32768 },
       { "path": "bin/ttgo-v161/boot_app0.bin",  "offset": 57344 },
-      { "path": "bin/ttgo-v161/V3.3-ttgo-lora32_V161_langDE.bin", "offset": 65536 }
+      { "path": "bin/ttgo-v161/V3.3-ttgo-lora32_V161_langEN.bin", "offset": 65536 }
     ] }]
 }
