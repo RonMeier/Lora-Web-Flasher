@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>LoRa Monitor Web-Flasher</title>
+  <script type="module" src="https://unpkg.com/esp-web-tools@latest/dist/web/install-button.js?module"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 2rem;
+      background-color: #f9f9f9;
+    }
+    h1 {
+      color: #333;
+    }
+    section {
+      margin-bottom: 2rem;
+      padding: 1rem;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    }
+    esp-web-install-button {
+      margin: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>LoRa Monitor – Firmware Flasher</h1>
+  <p>Bitte Gerät und Sprache auswählen:</p>
+  
+  <section><h2>TTGO LoRa V1.3</h2>
+    <strong>Deutsch:</strong>    
+    <esp-web-install-button manifest="manifests/manifest-ttgo-lora-v1.3-de.json"></esp-web-install-button>
+    <strong>English:</strong>
+    <esp-web-install-button manifest="manifests/manifest-ttgo-lora-v1.3-en.json"></esp-web-install-button>
+  </section>
+
+</body>
+</html>
