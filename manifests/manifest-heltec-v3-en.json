@@ -1,5 +1,5 @@
 {
-  "name": "Heltec LoRa32 V3 ENxx",
+  "name": "Heltec LoRa32 V3 EN",
   "version": "3.2",
   "builds": [{ "chipFamily": "ESP32-S3", "parts": [
       { "path": "bin/heltec-lora32-v3/bootloader.bin", "offset": 0 },
