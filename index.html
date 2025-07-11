@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html>
+<html lang="de">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>LoRa Monitor Web-Flasher</title>
   <script type="module" src="https://unpkg.com/esp-web-tools@latest/dist/web/install-button.js?module"></script>
   <style>
@@ -13,72 +13,71 @@
     h1 {
       color: #333;
     }
-    section {
-      margin-bottom: 2rem;
+    select {
+      padding: 0.5rem;
+      margin-right: 1rem;
+    }
+    #flashSection {
+      margin-top: 2rem;
       padding: 1rem;
       background-color: #fff;
       border-radius: 8px;
       box-shadow: 0 0 5px rgba(0,0,0,0.1);
-    }
-    esp-web-install-button {
-      margin: 0.5rem;
     }
   </style>
 </head>
 <body>
 
   <h1>LoRa Monitor – Firmware Flasher</h1>
-  <p>Bitte Gerät und Sprache auswählen  /  Please select device and language</p>
+  <p>Bitte Gerät und Sprache auswählen / Please select device and language</p>
 
-  <section><h2>Heltec LoRa32 V2</h2>
-    <strong>Deutsch:</strong>
-    <esp-web-install-button manifest="manifests/manifest-heltec-v2-de.json"></esp-web-install-button>
-    <strong>English:</strong>
-    <esp-web-install-button manifest="manifests/manifest-heltec-v2-en.json"></esp-web-install-button>
-  </section>
+  <div>
+    <label for="deviceSelect">Gerät / Device:</label>
+    <select id="deviceSelect">
+      <option value="">-- Bitte wählen --</option>
+      <option value="heltec-v2">Heltec LoRa32 V2</option>
+      <option value="heltec-v3">Heltec LoRa32 V3</option>
+      <option value="ttgo-v161">TTGO LoRa32 V1.6.1</option>
+      <option value="ttgo-lora-v1.3">TTGO LoRa V1.3</option>
+      <option value="ttgo-t3s3-sx1276">TTGO T3S3 SX1276</option>
+      <option value="ttgo-t3s3-sx1262">TTGO T3S3 SX1262</option>
+      <option value="ttgo-t3s3-lr1121">TTGO T3S3 LR1121</option>
+    </select>
 
-  <section><h2>Heltec LoRa32 V3</h2>
-    <strong>Deutsch:</strong>
-    <esp-web-install-button manifest="manifests/manifest-heltec-v3-de.json"></esp-web-install-button>
-    <strong>English:</strong>
-    <esp-web-install-button manifest="manifests/manifest-heltec-v3-en.json"></esp-web-install-button>
-  </section>
+    <label for="languageSelect">Sprache / Language:</label>
+    <select id="languageSelect">
+      <option value="">-- Bitte wählen --</option>
+      <option value="de">Deutsch</option>
+      <option value="en">English</option>
+    </select>
+  </div>
 
-  <section><h2>TTGO LoRa32 V1.6.1</h2>
-    <strong>Deutsch:</strong>
-    <esp-web-install-button manifest="manifests/manifest-ttgo-v161-de.json"></esp-web-install-button>
-    <strong>English:</strong>
-    <esp-web-install-button manifest="manifests/manifest-ttgo-v161-en.json"></esp-web-install-button>
-  </section>
+  <div id="flashSection"></div>
 
-  <section><h2>TTGO LoRa V1.3</h2>
-    <strong>Deutsch:</strong>    
-    <esp-web-install-button manifest="manifests/manifest-ttgo-lora-v1.3-de.json"></esp-web-install-button>
-    <strong>English:</strong>
-    <esp-web-install-button manifest="manifests/manifest-ttgo-lora-v1.3-en.json"></esp-web-install-button>
-  </section>
+  <script>
+    const deviceSelect = document.getElementById('deviceSelect');
+    const languageSelect = document.getElementById('languageSelect');
+    const flashSection = document.getElementById('flashSection');
 
-  <section><h2>TTGO LoRa T3S3 SX1276</h2>
-    <strong>Deutsch:</strong>
-    <esp-web-install-button manifest="manifests/manifest-ttgo-t3s3-sx1276-de.json"></esp-web-install-button>
-    <strong>English:</strong>
-    <esp-web-install-button manifest="manifests/manifest-ttgo-t3s3-sx1276-en.json"></esp-web-install-button>
-  </section> 
+    function updateFlashButton() {
+      const device = deviceSelect.value;
+      const language = languageSelect.value;
 
-  <section><h2>TTGO LoRa T3S3 SX1262</h2>
-    <strong>Deutsch:</strong>
-    <esp-web-install-button manifest="manifests/manifest-ttgo-t3s3-sx1262-de.json"></esp-web-install-button>
-    <strong>English:</strong>
-    <esp-web-install-button manifest="manifests/manifest-ttgo-t3s3-sx1262-en.json"></esp-web-install-button>
-  </section>  
+      if (device && language) {
+        const manifestPath = `manifests/manifest-${device}-${language}.json`;
+        flashSection.innerHTML = `
+          <h2>Flash bereit</h2>
+          <p>Gerät: <strong>${device}</strong><br>Sprache: <strong>${language}</strong></p>
+          <esp-web-install-button manifest="${manifestPath}"></esp-web-install-button>
+        `;
+      } else {
+        flashSection.innerHTML = '';
+      }
+    }
 
-  <section><h2>TTGO LoRa T3S3 LR1121</h2>
-    <strong>Deutsch:</strong>
-    <esp-web-install-button manifest="manifests/manifest-ttgo-t3s3-lr1121-de.json"></esp-web-install-button>
-    <strong>English:</strong>
-    <esp-web-install-button manifest="manifests/manifest-ttgo-t3s3-lr1121-en.json"></esp-web-install-button>
-  </section>  
-
+    deviceSelect.addEventListener('change', updateFlashButton);
+    languageSelect.addEventListener('change', updateFlashButton);
+  </script>
 
 </body>
 </html>
