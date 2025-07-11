@@ -2,7 +2,7 @@
   "name": "Heltec LoRa32 V3 DE",
   "version": "3.2",
   "builds": [{ "chipFamily": "ESP32-S3", "parts": [
-      { "path": "bin/heltec-lora32-v3/bootloader.bin", "offset": 4096 },
+      { "path": "bin/heltec-lora32-v3/bootloader.bin", "offset": 0 },
       { "path": "bin/heltec-lora32-v3/partitions.bin", "offset": 32768 },
       { "path": "bin/heltec-lora32-v3/boot_app0.bin",  "offset": 57344 },
       { "path": "bin/heltec-lora32-v3/V3.2-heltec-lora32_V3_langDE.bin", "offset": 65536 }
