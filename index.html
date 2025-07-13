@@ -52,7 +52,9 @@
     </select>
   </div>
 
-  <div id="flashSection"></div>
+  <div id="flashSection">
+    <p>Your browser does not support installing things on ESP devices. Use Google Chrome or Microsoft Edge.</p>
+  </div>
 
   <script>
     const deviceSelect = document.getElementById('deviceSelect');
@@ -65,13 +67,32 @@
 
       if (device && language) {
         const manifestPath = `manifests/manifest-${device}-${language}.json`;
-        flashSection.innerHTML = `
-          <h2>Flash bereit</h2>
-          <p>Gerät: <strong>${device}</strong><br>Sprache: <strong>${language}</strong></p>
-          <esp-web-install-button manifest="${manifestPath}"></esp-web-install-button>
-        `;
+
+        fetch(manifestPath)
+          .then(response => response.json())
+          .then(manifest => {
+            const version = manifest.version || "unbekannt";
+
+            flashSection.innerHTML = `
+              <h2>Flash ready</h2>
+              <p>
+                Device: <strong>${device}</strong><br>
+                Language: <strong>${language}</strong><br>
+                Version: <strong>${version}</strong>
+              </p>
+              <esp-web-install-button manifest="${manifestPath}"></esp-web-install-button>
+            `;
+          })
+          .catch(() => {
+            // Wenn das Manifest nicht geladen werden kann, bleibt der Standardtext
+            flashSection.innerHTML = `
+              <p>Your browser does not support installing things on ESP devices. Use Google Chrome or Microsoft Edge.</p>
+            `;
+          });
       } else {
-        flashSection.innerHTML = '';
+        flashSection.innerHTML = `
+          <p>Your browser does not support installing things on ESP devices. Use Google Chrome or Microsoft Edge.</p>
+        `;
       }
     }
 
