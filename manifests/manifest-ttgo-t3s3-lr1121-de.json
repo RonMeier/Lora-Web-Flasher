@@ -1,10 +1,10 @@
 {
   "name": "TTGO T3S3 LR1121 DE",
-  "version": "3.2",
+  "version": "3.4",
   "builds": [{ "chipFamily": "ESP32-S3", "parts": [
       { "path": "bin/ttgo-t3s3-lr1121/bootloader.bin", "offset": 0 },
       { "path": "bin/ttgo-t3s3-lr1121/partitions.bin", "offset": 32768 },
       { "path": "bin/ttgo-t3s3-lr1121/boot_app0.bin", "offset": 57344 },
-      { "path": "bin/ttgo-t3s3-lr1121/V3.2-ttgo-LoRa-T3S3_LR1121_langDE.bin", "offset": 65536 }
+      { "path": "bin/ttgo-t3s3-lr1121/V3.4-ttgo-LoRa-T3S3_LR1121_langDE.bin", "offset": 65536 }
     ] }]
 }
