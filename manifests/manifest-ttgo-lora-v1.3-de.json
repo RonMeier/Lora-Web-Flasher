@@ -6,9 +6,10 @@
       { "path": "bin/ttgo-lora-v1.3/default.bin", "offset": 32768 },
       { "path": "bin/ttgo-lora-v1.3/boot_app0.bin",  "offset": 57344 },
       { "path": "bin/ttgo-lora-v1.3/V3.4-ttgo-loraV1.3_langDE.bin", "offset": 65536 },
-      { "path": "bin/ttgo-lora-v1.3/spiffs.bin", "offset": 687865856 }
+      { "path": "bin/ttgo-lora-v1.3/spiffs.bin", "offset": 688194536 }
     ] }]
 }
+
 
 
 
