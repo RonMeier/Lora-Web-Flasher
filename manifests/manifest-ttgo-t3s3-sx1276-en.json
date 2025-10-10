@@ -1,11 +1,10 @@
 {
   "name": "TTGO T3S3 SX1276 EN",
-  "version": "3.5",
+  "version": "3.51",
   "builds": [{ "chipFamily": "ESP32-S3", "parts": [
       { "path": "bin/ttgo-t3s3-sx1276/bootloader.bin", "offset": 0 },
       { "path": "bin/ttgo-t3s3-sx1276/partitions.bin", "offset": 32768 },
       { "path": "bin/ttgo-t3s3-sx1276/boot_app0.bin", "offset": 57344 },
-      { "path": "bin/ttgo-t3s3-sx1276/V3.5-ttgo-LoRa-T3S3_SX1276_langEN.bin", "offset": 65536 }
+      { "path": "bin/ttgo-t3s3-sx1276/V3.51-ttgo-LoRa-T3S3_SX1276_langEN.bin", "offset": 65536 }
     ] }]
 }
-
