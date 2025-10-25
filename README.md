@@ -1,4 +1,4 @@
-# Lora-Web-Flasher
+# LoRa-Web-Flasher
 
 ## Overview
 * integrated web server
