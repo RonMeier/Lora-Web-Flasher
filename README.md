@@ -1,9 +1,15 @@
 # Lora-Web-Flasher
 
-website:
+## Overview
+* integrated web server
+  
+* LoRa to MQTT, LoRa to HTTP, LoRa to UDP
 
-https://github.com/RonMeier/LoRa-Monitor
+* Scanner with LoRaWAN and Mesh activity measurement
 
-https://ronmeier.github.io/Lora-Web-Flasher
+* Supports Heltec and Lilygo esp32 devices
 
+
+---
+flash your device directly with [LoRa Monitor – Firmware Flasher](https://ronmeier.github.io/Lora-Web-Flasher)    
 
