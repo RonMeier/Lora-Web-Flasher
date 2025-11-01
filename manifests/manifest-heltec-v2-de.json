@@ -1,11 +1,12 @@
 {
   "name": "Heltec LoRa32 V2 DE",
-  "version": "3.6",
+  "version": "3.62",
   "builds": [{ "chipFamily": "ESP32", "parts": [
       { "path": "bin/heltec-lora32-v2/bootloader.bin", "offset": 4096 },
       { "path": "bin/heltec-lora32-v2/default.bin", "offset": 32768 },
       { "path": "bin/heltec-lora32-v2/boot_app0.bin",  "offset": 57344 },
-      { "path": "bin/heltec-lora32-v2/V3.6-heltec-lora32_V2_langDE.bin", "offset": 65536 }
+      { "path": "bin/heltec-lora32-v2/V3.62-heltec-lora32_V2_langDE.bin", "offset": 65536 }
     ] }]
 
 }
+
