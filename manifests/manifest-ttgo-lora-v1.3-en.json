@@ -1,5 +1,5 @@
 {
-  "name": "LilyGo TTGO-LORA32-V1.3 DE",
+  "name": "LilyGo TTGO-LORA32-V1.3 EN",
   "version": "3.62",
   "builds": [{ "chipFamily": "ESP32", "parts": [
       { "path": "bin/ttgo-lora-v1.3/bootloader.bin", "offset": 4096 },
@@ -8,5 +8,6 @@
       { "path": "bin/ttgo-lora-v1.3/V3.62-ttgo-loraV1.3_langEN.bin", "offset": 65536 }
     ] }]
 }
+
 
 
