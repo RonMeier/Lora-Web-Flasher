@@ -1,10 +1,11 @@
 {
   "name": "Heltec Vision Master E213 DE",
-  "version": "3.51",
+  "version": "3.61",
   "builds": [{ "chipFamily": "ESP32-S3", "parts": [
       { "path": "bin/heltec-vm213/bootloader.bin", "offset": 0 },
       { "path": "bin/heltec-vm213/partitions.bin", "offset": 32768 },
       { "path": "bin/heltec-vm213/boot_app0.bin", "offset": 57344 },
-      { "path": "bin/heltec-vm213/V3.51-heltec-lora32_E213_langDE.bin", "offset": 65536 }
+      { "path": "bin/heltec-vm213/V3.61-heltec-lora32_E213_langDE.bin", "offset": 65536 }
     ] }]
+
 }
