@@ -3,11 +3,12 @@
   "version": "3.64",
   "builds": [{ "chipFamily": "ESP32-S3", "parts": [
       { "path": "bin/heltec-lora32-v3/bootloader.bin", "offset": 4096 },
-      { "path": "bin/heltec-lora32-v3/default.bin", "offset": 32768 },
+      { "path": "bin/heltec-lora32-v3/partitions.bin", "offset": 32768 },
       { "path": "bin/heltec-lora32-v3/boot_app0.bin",  "offset": 57344 },
       { "path": "bin/heltec-lora32-v3/V3.64-heltec-lora32_V3_langDE.bin", "offset": 65536 }
     ] }]
 
 }
+
 
 
